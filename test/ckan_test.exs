@@ -18,6 +18,11 @@ defmodule CKANTest do
 
     r = Client.package_show context[:client], id: to_fetch
     assert r.result.name == to_fetch
+
+    # May fail on a dataset with no resources .. :(
+    to_fetch = hd(r.result.resources).id
+    r = Client.resource_show context[:client], id: to_fetch
+    assert r.result.id == to_fetch
   end
 
   test "we can show organizations", context do

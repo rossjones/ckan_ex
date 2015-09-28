@@ -9,6 +9,7 @@ defmodule CKAN.Client do
     {:get, :organization_list, []},
     {:get, :group_show, []},
     {:get, :group_list, []},
+    {:get, :resource_show, []},
     {:post, :package_create, %{}}
   ]
 
