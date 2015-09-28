@@ -5,6 +5,10 @@ defmodule CKAN.Client do
   functions = [
     {:get, :package_show, []},
     {:get, :package_list, []},
+    {:get, :organization_show, []},
+    {:get, :organization_list, []},
+    {:get, :group_show, []},
+    {:get, :group_list, []},
     {:post, :package_create, %{}}
   ]
 

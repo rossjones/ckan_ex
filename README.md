@@ -18,9 +18,20 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
           [applications: [:ckan]]
         end
 
+## Tests
+
+To run the tests you will need to set two environment variables:
+
+```bash
+export CKAN_TEST_HOST=http://demo.ckan.org
+export CKAN_TEST_KEY=your-api-key
+```
+
+Set them and then run ```mix test```.
+
 ## Usage
 
-API actions are exposed as functions on the CKAN.Client, and you should call them with ..
+API actions are exposed as functions on the CKAN.Client, and will return the entire API response as a map.
 
 ```elixir 
 
