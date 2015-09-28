@@ -21,6 +21,10 @@ defmodule CKAN.Client do
     {:get, :user_list, []},
     {:get, :package_search, []},
 
+    # Requires an authed user
+    {:get, :organization_list_for_user, []},
+
+
     {:post, :package_create, %{}}
   ]
 
@@ -65,7 +69,12 @@ defmodule CKAN.Client do
 
   def handle_call({:get, function, args}, _from, state) do
     qs = keywords_to_querystring(args)
-    response = HTTPotion.get state.server <> to_string(function) <> qs
+    response = case state.key do
+      nil ->
+        HTTPotion.get state.server <> to_string(function) <> qs
+      k ->
+        HTTPotion.get state.server <> to_string(function) <> qs, [headers: ["authorization": k]]
+    end
     {:ok, result} = JSON.decode(response.body, keys: :atoms)
     {:reply, result, state}
   end

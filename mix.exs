@@ -7,12 +7,27 @@ defmodule CKAN.Mixfile do
      elixir: "~> 1.1",
      build_embedded: Mix.env == :prod,
      start_permanent: Mix.env == :prod,
+     description: description,
+     package: package,
      deps: deps]
   end
 
   def application do
     [applications: [:logger, :httpotion],
      mod: {CKAN, []}]
+  end
+
+  def description do
+    "A small library for interacting with CKAN (ckan.org) instances"
+  end
+
+  def package do
+    [
+     files: ["lib", "priv", "mix.exs", "README*", "readme*", "LICENSE*", "license*"],
+     maintainers: ["Ross Jones"],
+     licenses: ["Apache 2.0"],
+     links: %{"GitHub" => "https://github.com/rossjones/ckan_ex"}
+    ]
   end
 
   defp deps do
@@ -23,3 +38,5 @@ defmodule CKAN.Mixfile do
     ]
   end
 end
+
+

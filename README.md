@@ -20,7 +20,7 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
 
 ## Tests
 
-To run the tests you will need to set two environment variables:
+To run the tests you will need to set three environment variables:
 
 ```bash
 export CKAN_TEST_HOST=http://demo.ckan.org

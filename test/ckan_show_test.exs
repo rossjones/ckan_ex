@@ -1,4 +1,4 @@
-defmodule CKANTest do
+defmodule CKANTest.Show do
   use ExUnit.Case
   alias CKAN.Client, as: Client
   doctest CKAN
