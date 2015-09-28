@@ -10,6 +10,17 @@ defmodule CKAN.Client do
     {:get, :group_show, []},
     {:get, :group_list, []},
     {:get, :resource_show, []},
+    {:get, :resource_view_show, []},
+    {:get, :resource_view_list, []},
+    {:get, :resource_status_show, []},
+    {:get, :revision_show, []},
+    {:get, :group_package_show, []},
+    {:get, :tag_show, []},
+    {:get, :tag_list, []},
+    {:get, :user_show, []},
+    {:get, :user_list, []},
+    {:get, :package_search, []},
+
     {:post, :package_create, %{}}
   ]
 

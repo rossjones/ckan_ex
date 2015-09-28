@@ -12,6 +12,18 @@ defmodule CKANTest do
     {:ok, client: client, auth_client: auth_client}
   end
 
+  test "we can fail to show packages", context do
+    r = Client.package_show context[:client], id: "___"
+    assert r.success == false
+  end
+
+  test "we can send bad data to show packages", context do
+    r = Client.package_show context[:client], wombles: "are cool"
+    assert r.success == false
+    assert r.error.__type == "Validation Error"
+    assert r.error.name_or_id == ["Missing value"]
+  end
+
   test "we can show packages", context do
     r = Client.package_list context[:client], []
     to_fetch = hd r.result
