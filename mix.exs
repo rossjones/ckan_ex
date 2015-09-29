@@ -33,7 +33,7 @@ defmodule CKAN.Mixfile do
   defp deps do
     [
       {:poison, "~> 1.3"},
-      {:ibrowse, github: "cmullaparthi/ibrowse", tag: "v4.1.2"},
+      {:ibrowse, github: "cmullaparthi/ibrowse", tag: "v4.2"},
       {:httpotion, "~> 2.1.0"}
     ]
   end
