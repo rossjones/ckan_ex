@@ -34,7 +34,9 @@ defmodule CKAN.Mixfile do
     [
       {:poison, "~> 1.3"},
       {:ibrowse, github: "cmullaparthi/ibrowse", tag: "v4.2"},
-      {:httpotion, "~> 2.1.0"}
+      {:httpotion, "~> 2.1.0"},
+      {:earmark, "~> 0.1", only: :dev},
+      {:ex_doc, "~> 0.10", only: :dev}
     ]
   end
 end

@@ -1,0 +1,641 @@
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CKAN.Client – ckan v0.0.2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="ExDoc v0.10.0">
+    <link rel="stylesheet" href="dist/app.css" />
+    <script src="dist/sidebar_items.js"></script>
+  </head>
+  <body data-type="modules">
+
+    <div class="main">
+<button class="sidebar-toggle">
+  <i class="icon-menu"></i>
+</button>
+<section class="sidebar">
+  <button class="sidebar-toggle">
+    <i class="icon-menu"></i>
+  </button>
+
+  
+  <a href="extra-api-reference.html" class="sidebar-projectLink">
+    <div class="sidebar-projectDetails">
+      <h1 class="sidebar-projectName">
+        ckan
+      </h1>
+      <h2 class="sidebar-projectVersion">
+        v0.0.2
+      </h2>
+    </div>
+    
+  </a>
+
+  <div class="sidebar-search">
+    <i class="icon-search"></i>
+    <input type="text" class="sidebar-searchInput" placeholder="search" autocomplete="off" />
+  </div>
+
+  <ul class="sidebar-listNav">
+    <li><a id="extras-list" href="#full-list">Pages</a></li>
+
+    
+      <li><a id="modules-list" href="#full-list">Modules</a></li>
+    
+
+    
+
+    
+  </ul>
+
+  <ul id="full-list" class="sidebar-fullList"></ul>
+  <div class="sidebar-noResults"></div>
+</section>
+
+<section class="content">
+  <div id="content" class="content-inner">
+
+
+      <h1>
+        CKAN.Client
+        
+        
+      </h1>
+
+      
+        <section id="moduledoc" class="docstring">
+          <p>This module is the client that can be used for accessing a remote
+CKAN instance.</p>
+<p>New clients should be created by calling <code class="inline">new</code> with the URL
+of the server, and an optional API key.</p>
+
+        </section>
+      
+
+      
+        <section id="summary" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#summary">
+              <i class="icon-link"></i>
+            </a>
+            Summary
+          </h1>
+          
+
+          
+  <div class="summary-functions summary">
+    <h2>
+      <a href="#functions">Functions</a>
+    </h2>
+    <div class="summary-row">
+  <div class="summary-signature">
+    <a href="#group_list/2">group_list(client, args)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>“Lists the names of the known groups”</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#group_package_show/2">group_package_show(client, args)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>“”</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#group_show/2">group_show(client, args)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>“Shows group details”</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#new/2">new(server, api_key \\ nil)</a>
+  </div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#organization_list/2">organization_list(client, args)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>“Lists the names of the known organizations”</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#organization_list_for_user/2">organization_list_for_user(client, args)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>“”</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#organization_show/2">organization_show(client, args)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>“Shows organization details”</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#package_create/2">package_create(client, args)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>“”</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#package_delete/2">package_delete(client, args)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>“”</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#package_list/2">package_list(client, args)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>“Returns the names of all of the known packages”</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#package_search/2">package_search(client, args)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>“”</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#package_show/2">package_show(client, args)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>“Shows a package”</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#package_update/2">package_update(client, args)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>“”</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#resource_show/2">resource_show(client, args)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>“”</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#resource_status_show/2">resource_status_show(client, args)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>“”</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#resource_view_list/2">resource_view_list(client, args)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>“”</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#resource_view_show/2">resource_view_show(client, args)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>“”</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#revision_show/2">revision_show(client, args)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>“”</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#tag_list/2">tag_list(client, args)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>“”</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#tag_show/2">tag_show(client, args)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>“”</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#user_list/2">user_list(client, args)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>“”</p>
+</div>
+  
+</div>
+<div class="summary-row">
+  <div class="summary-signature">
+    <a href="#user_show/2">user_show(client, args)</a>
+  </div>
+  
+    <div class="summary-synopsis"><p>“”</p>
+</div>
+  
+</div>
+
+  </div>
+
+
+          
+
+          
+
+        </section>
+      
+
+      
+
+      
+        <section id="functions" class="details-list">
+          <h1 class="section-heading">
+            <a class="hover-link" href="#functions">
+              <i class="icon-link"></i>
+            </a>
+            Functions
+          </h1>
+          <div class="detail" id="group_list/2">
+  <div class="detail-header">
+    <a href="#group_list/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">group_list(client, args)</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>  “Lists the names of the known groups”</p>
+
+  </section>
+</div>
+<div class="detail" id="group_package_show/2">
+  <div class="detail-header">
+    <a href="#group_package_show/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">group_package_show(client, args)</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>  “”</p>
+
+  </section>
+</div>
+<div class="detail" id="group_show/2">
+  <div class="detail-header">
+    <a href="#group_show/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">group_show(client, args)</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>  “Shows group details”</p>
+
+  </section>
+</div>
+<div class="detail" id="new/2">
+  <div class="detail-header">
+    <a href="#new/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">new(server, api_key \\ nil)</span>
+      
+  </div>
+  
+  <section class="docstring">
+    
+  </section>
+</div>
+<div class="detail" id="organization_list/2">
+  <div class="detail-header">
+    <a href="#organization_list/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">organization_list(client, args)</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>  “Lists the names of the known organizations”</p>
+
+  </section>
+</div>
+<div class="detail" id="organization_list_for_user/2">
+  <div class="detail-header">
+    <a href="#organization_list_for_user/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">organization_list_for_user(client, args)</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>  “”</p>
+
+  </section>
+</div>
+<div class="detail" id="organization_show/2">
+  <div class="detail-header">
+    <a href="#organization_show/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">organization_show(client, args)</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>  “Shows organization details”</p>
+
+  </section>
+</div>
+<div class="detail" id="package_create/2">
+  <div class="detail-header">
+    <a href="#package_create/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">package_create(client, args)</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>  “”</p>
+
+  </section>
+</div>
+<div class="detail" id="package_delete/2">
+  <div class="detail-header">
+    <a href="#package_delete/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">package_delete(client, args)</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>  “”</p>
+
+  </section>
+</div>
+<div class="detail" id="package_list/2">
+  <div class="detail-header">
+    <a href="#package_list/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">package_list(client, args)</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>  “Returns the names of all of the known packages”</p>
+
+  </section>
+</div>
+<div class="detail" id="package_search/2">
+  <div class="detail-header">
+    <a href="#package_search/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">package_search(client, args)</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>  “”</p>
+
+  </section>
+</div>
+<div class="detail" id="package_show/2">
+  <div class="detail-header">
+    <a href="#package_show/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">package_show(client, args)</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>  “Shows a package”</p>
+
+  </section>
+</div>
+<div class="detail" id="package_update/2">
+  <div class="detail-header">
+    <a href="#package_update/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">package_update(client, args)</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>  “”</p>
+
+  </section>
+</div>
+<div class="detail" id="resource_show/2">
+  <div class="detail-header">
+    <a href="#resource_show/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">resource_show(client, args)</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>  “”</p>
+
+  </section>
+</div>
+<div class="detail" id="resource_status_show/2">
+  <div class="detail-header">
+    <a href="#resource_status_show/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">resource_status_show(client, args)</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>  “”</p>
+
+  </section>
+</div>
+<div class="detail" id="resource_view_list/2">
+  <div class="detail-header">
+    <a href="#resource_view_list/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">resource_view_list(client, args)</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>  “”</p>
+
+  </section>
+</div>
+<div class="detail" id="resource_view_show/2">
+  <div class="detail-header">
+    <a href="#resource_view_show/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">resource_view_show(client, args)</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>  “”</p>
+
+  </section>
+</div>
+<div class="detail" id="revision_show/2">
+  <div class="detail-header">
+    <a href="#revision_show/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">revision_show(client, args)</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>  “”</p>
+
+  </section>
+</div>
+<div class="detail" id="tag_list/2">
+  <div class="detail-header">
+    <a href="#tag_list/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">tag_list(client, args)</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>  “”</p>
+
+  </section>
+</div>
+<div class="detail" id="tag_show/2">
+  <div class="detail-header">
+    <a href="#tag_show/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">tag_show(client, args)</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>  “”</p>
+
+  </section>
+</div>
+<div class="detail" id="user_list/2">
+  <div class="detail-header">
+    <a href="#user_list/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">user_list(client, args)</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>  “”</p>
+
+  </section>
+</div>
+<div class="detail" id="user_show/2">
+  <div class="detail-header">
+    <a href="#user_show/2" class="detail-link" title="Link to this function">
+      <i class="icon-link"></i>
+    </a>
+    <span class="signature">user_show(client, args)</span>
+      
+  </div>
+  
+  <section class="docstring">
+    <p>  “”</p>
+
+  </section>
+</div>
+
+        </section>
+      
+
+      
+
+      
+        <footer class="footer">
+      <p>
+        <span class="line">
+          Built using
+          <a href="https://github.com/elixir-lang/ex_doc" title="ExDoc" rel="help" target="_blank">ExDoc</a> (v0.10.0),
+        </span>
+        <span class="line">
+          designed by
+          <a href="https://twitter.com/dignifiedquire" target="_blank" title="@dignifiedquire">Friedel Ziegelmayer</a>.
+          </span>
+      </p>
+    </footer>
+  </div>
+</section>
+</div>
+    <script src="dist/app.js"></script>
+  </body>
+</html>
+
