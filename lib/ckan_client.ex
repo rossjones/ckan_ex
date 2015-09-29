@@ -27,7 +27,9 @@ defmodule CKAN.Client do
     # Requires an authed user
     {:get, :organization_list_for_user, []},
 
-    {:post, :package_create, %{}}
+    {:post, :package_create, %{}},
+    {:post, :package_update, %{}},
+    {:post, :package_delete, []},
   ]
 
   def new(server, api_key \\ nil) do
@@ -68,7 +70,7 @@ defmodule CKAN.Client do
     result
   end
 
-  def process(client, {:post, function, args}) do
+  def process(client, {:post, function, args}) when is_map(args) do
     headers = get_headers_from_state(client)
     host = client.server <> function
 
@@ -77,10 +79,16 @@ defmodule CKAN.Client do
     result
   end
 
+  def process(client, {:post, function, args})  do
+    new_args = args |> Enum.into(%{})
+    process(client, {:post, function, new_args})
+  end
+
+
   defp get_headers_from_state(client) do
     headers = case client.key do
-      nil -> []
-      k -> ["Authorization": k]
+      nil -> ["Content-type": "application/json"]
+      k -> ["Authorization": k, "Content-type": "application/json"]
     end
 
   end
