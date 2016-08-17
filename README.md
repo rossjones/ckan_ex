@@ -35,7 +35,7 @@ API actions are exposed as functions on the CKAN.Client, and will return the ent
 
 ```elixir 
 
-  alias CKAN.Client, as: Client
+  alias CKAN.Client
   client = Client.new("http://demo.ckan/org")
   result = Client.package_show client, id: "package_name"
 	
